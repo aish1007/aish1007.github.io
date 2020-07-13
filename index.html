@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Rajesh Gupta Portfolio</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="shortcut icon"
+      href="https://img.icons8.com/color/48/000000/hearts.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Indie+Flower"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="public/css/style.css" />
+    <link rel="stylesheet" href="public/css/animate.css" />
+    <link rel="stylesheet" href="public/css/flexslider.css" />
+    <link rel="stylesheet" href="public/css/services.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"
+    />
+
+    <script src="public/bundle.js"></script>
+    <script
+      src="https://kit.fontawesome.com/96bc1c7d72.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="fixed-content">
+        <img class="port" src="public/img/pic01.jpg" />
+        <h2 id="name" class="name">
+          <%= htmlWebpackPlugin.options.basicInfo.name%>,<span
+            style="font-size: 17px;"
+          >
+            MACS, B.E.</span
+          >
+        </h2>
+        <p id="title" style="color: #fff;">
+          <%= htmlWebpackPlugin.options.basicInfo.title%>, <%=
+          htmlWebpackPlugin.options.basicInfo.company %>
+        </p>
+
+        <div class="icon-row">
+          <a href="https://github.com/rajesh-gupta-14" id="github"><i class="fa fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/rajeshgupta14/" id="linkedin"><i class="fa fa-linkedin"></i></a>
+          <a href="mailto:rajesh.gupta@dal.ca"
+            ><i class="fa fa-envelope"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+    <div class="second">
+      <div class="fixed-content">
+        <p class="summary">
+          I have a strong background in various phases of the data science lifecycle from data collection to wrangling to building machine learning models. I’m especially interested and well versed in the field of NLP.
+
+          Some of my projects include unsupervised topic modeling, document classification, named-entity recognition, sentiment analysis, and anomaly detection. I have hands on experience in building custom neural nets and fine-tuning pre-trained models like BERT and its other variants; word embedding techniques like Word2Vec and GloVe; and various other language models. Additionally, I have done projects that involve statistical modeling for predictive analytics and collaborative filtering for recommendation systems. Overall, I have a good intuitive understanding towards machine learning algorithms and you can find their usage in some of the projects I have listed below.
+        </p>
+      </div>
+    </div>
+    <section class="colorlib-about" data-section="about">
+      <div class="container">
+        <div class="row">
+          <script>
+            var domains = [
+              "Academic Courses",
+              "Online Courses",
+              "Accomplishments",
+              "Hackathons",
+            ];
+            var icons = ["university", "certificate", "trophy", "code"];
+            var urls = [
+              "index1.html",
+              "index2.html",
+              "index3.html",
+              "index4.html",
+            ];
+            var ids = [3, 4, 2, 1];
+            for (let i = 0; i < domains.length; i++) {
+              var dir = ids[i] % 2 == 0 ? "Right" : "Left";
+              document.write(
+                '<div class="col-sm-3 animate-box" data-animate-effect="fadeIn' +
+                  dir +
+                  '">\
+                              <a href="' +
+                  urls[i] +
+                  '" >\
+                                <div class="services color-' +
+                  ids[i] +
+                  '">\
+                                  <span class="icon2"><i class="fa fa-' +
+                  icons[i] +
+                  '"></i></span>\
+                                  <h3 class="domains">' +
+                  domains[i] +
+                  "</h3>\
+                                </div>\
+                              </a>\
+                            </div>"
+              );
+            }
+          </script>
+        </div>
+      </div>
+    </section>
+    <br /><br />
+    <div class="container">
+      <div class="row">
+        <div
+          class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
+          data-animate-effect="fadeInLeft"
+        >
+          <h2>Skills</h2>
+        </div>
+      </div>
+      <div class="card-deck animate-box" data-animate-effect="fadeInRight">
+        <script>
+          var bgcolor = ["#2c98f0", "#ec5453", "#e0af1d", "#aa3fbd"];
+
+          // var skillIcons = ["layer-group", "database", "scroll", "cloud"];
+          var skillIcons = ("<%=htmlWebpackPlugin.options.icon%>").split(",");
+          // var headings = [heading1, "ABC", "CDE", "efg"];
+          var skillHeading = "<%=htmlWebpackPlugin.options.skillNames%>";
+          skillHeading = skillHeading.split(",");
+          console.log(skillHeading);
+          // var skillList = "<%=htmlWebpackPlugin.options.skills%>";
+          // console.log(skillList);
+          var obj = { some: "val" };
+          var list0 = "<%=htmlWebpackPlugin.options.skill1%>";
+          var list1 = "<%=htmlWebpackPlugin.options.skill2%>";
+          var list2 = "<%=htmlWebpackPlugin.options.skill3%>";
+          var list3 = "<%=htmlWebpackPlugin.options.skill4%>";
+
+          for (var i = 0; i < 4; i++) {
+            var val = eval("list" + i);
+            document.write(
+              '<div class="card skills">\
+                <div  class=" skills-icon-holder position-absolute d-inline-block rounded-circle text-center" style="background-color: ' +
+                bgcolor[i] +
+                '">\
+                                    <i class="fa fa-' +
+                skillIcons[i] +
+                '" aria-hidden="true" style="margin-top:2px; color:white;font-size: xx-large;"></i></div>\
+                                    <div class="card-body">\
+                                        <h5 class="card-title">' +
+                skillHeading[i] +
+                '</h5>\
+                                          <p class= "card-text">' +
+                val +
+                " </p></div></div>"
+            );
+          }
+        </script>
+      </div>
+      <br /><br />
+      <section class="colorlib-experience" data-section="experience">
+        <div class="colorlib-narrow-content">
+          <div class="row">
+            <div
+              class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
+              data-animate-effect="fadeInLeft"
+            >
+              <h2>Work Experience</h2>
+              <hr />
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="timeline-centered">
+                  <script>
+                    var position = "<%=htmlWebpackPlugin.options.position%>".split(
+                      ","
+                    );
+                    var AT = "<%=htmlWebpackPlugin.options.company%>".split(
+                      ","
+                    );
+                    var timeSpan = "<%=htmlWebpackPlugin.options.duration%>".split(
+                      ","
+                    );
+
+                    var descriptions = "<%=htmlWebpackPlugin.options.desc%>".split(
+                      "theend"
+                    );
+                    var iclass = "<%=htmlWebpackPlugin.options.workExpIcon%>".split(
+                      ","
+                    );
+                    var iclass = ["desktop", "connectdevelop", "user", "code"];
+                    var color = [5, 1, 2];
+                    for (let i = 0; i < AT.length; i++) {
+                      var dir = i % 2 == 0 ? "Right" : "Left";
+                      document.write(
+                        '<article class="timeline-entry animate-box" data-animate-effect="fadeIn' +
+                          dir +
+                          '">\
+										<div class="timeline-entry-inner">\
+											<div class="timeline-icon color-' +
+                          color[i] +
+                          '">\
+												<i class="fa fa-' +
+                          iclass[i] +
+                          '"></i>\
+											</div>\
+											<div class="timeline-label">\
+												<h2><a href="#">' +
+                          position[i] +
+                          "</a> <span class='time'>" +
+                          timeSpan[i] +
+                          '</span></h2>\
+												<p><strong><a href="#">' +
+                          AT[i] +
+                          "</a></strong>\
+													<br> " +
+                          descriptions[i] +
+                          "</p>\
+												<p></p>\
+											</div>\
+										</div>\
+									</article>"
+                      );
+                    }
+                  </script>
+                  <article
+                    class="timeline-entry begin animate-box"
+                    data-animate-effect="fadeInBottom"
+                  >
+                    <div class="timeline-entry-inner">
+                      <div class="timeline-icon color-3"></div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </section>
+      <section class="colorlib-experience" data-section="experience">
+        <div class="colorlib-narrow-content">
+          <div class="row">
+            <div
+              class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
+              data-animate-effect="fadeInLeft"
+            >
+              <h2>Education</h2>
+              <hr />
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="timeline-centered">
+                  <script>
+                    var place = "<%=htmlWebpackPlugin.options.place%>".split(
+                      ","
+                    );
+                    var degree = "<%=htmlWebpackPlugin.options.degree%>".split(
+                      ","
+                    );
+                    var timeSpan = "<%=htmlWebpackPlugin.options.year%>".split(
+                      ","
+                    );
+
+                    var descriptions = "<%=htmlWebpackPlugin.options.course%>".split(
+                      "theend"
+                    );
+
+                    var iclass = ["desktop", "code", "user", "globe"];
+                    var eduIcons = "<%=htmlWebpackPlugin.options.educationIcons%>".split(
+                      ","
+                    );
+                    var color = [5, 1, 2];
+                    for (let i = 0; i < place.length; i++) {
+                      var dir = i % 2 == 0 ? "Right" : "Left";
+                      document.write(
+                        '<article class="timeline-entry animate-box" data-animate-effect="fadeIn' +
+                          dir +
+                          '">\
+      										<div class="timeline-entry-inner">\
+      											<div class="timeline-icon color-' +
+                          color[i] +
+                          '">\
+      												<i class="fa fa-' +
+                          eduIcons[i] +
+                          '"></i>\
+      											</div>\
+      											<div class="timeline-label">\
+      												<h2><a href="#">' +
+                          degree[i] +
+                          "</a> <span class='time'>" +
+                          timeSpan[i] +
+                          '</span></h2>\
+      												<p><strong><a href="#">' +
+                          place[i] +
+                          "</a></strong>\
+      											</div>\
+      										</div>\
+      									</article>"
+                      );
+                    }
+                  </script>
+                  <article
+                    class="timeline-entry begin animate-box"
+                    data-animate-effect="fadeInBottom"
+                  >
+                    <div class="timeline-entry-inner">
+                      <div class="timeline-icon color-3"></div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </section>
+      <section class="colorlib-project" data-section="project">
+        <div class="colorlib-narrow-content">
+          <div class="row">
+            <div
+              class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
+              data-animate-effect="fadeInLeft"
+            >
+              <h2>Projects</h2>
+              <hr />
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <script>
+                var icons = "<%=htmlWebpackPlugin.options.projectIcons%>".split(
+                  ","
+                );
+                var domains = "<%=htmlWebpackPlugin.options.projectName%>".split(
+                  ","
+                );
+                var ppDomains = "<%=htmlWebpackPlugin.options.projectDescription%>".split(
+                  "theend"
+                );
+                var techStack = "<%=htmlWebpackPlugin.options.projectTechStack%>".split(
+                  "theend"
+                );
+                var urls1 = "<%=htmlWebpackPlugin.options.projectUrl%>".split(
+                  ","
+                );
+
+                for (let i = 0; i < domains.length; i++) {
+                  var dir = ids[i] % 2 == 0 ? "Right" : "Left";
+                  document.write(
+                    '<div class="col-md-12 animate-box" data-animate-effect="fadeIn' +
+                      dir +
+                      '">\
+                              <a href="' +
+                      urls1[i] +
+                      '" >\
+                                <div class="services color-' +
+                      (i + 1) +
+                      '">\
+                                  <span class="icon2"><i class="fa fa-' +
+                      icons[i] +
+                      '"></i></span>\
+                                  <h3 class="projName">' +
+                      domains[i] +
+                      "</h3>\
+                                  <p class='projDesc'>" +
+                      ppDomains[i] +
+                      "</p>\
+                      <p>" +
+                      techStack[i] +
+                      "</p>\
+                                </div>\
+                              </a>\
+                            </div>"
+                  );
+                }
+              </script>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <section class="colorlib-carousel" data-section="carousel">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <ol class="carousel-indicators">
+            <script>
+              var numCarousel = 4;
+              for (let i = 0; i < numCarousel; i++)
+                document.write(
+                  '<li data-target="#carouselExampleIndicators" data-slide-to="' +
+                    i +
+                    '"' +
+                    (i == 0 ? ' class="active"' : "") +
+                    "></li>"
+                );
+            </script>
+          </ol>
+          <div class="carousel-inner text-center" style="max-height: 600px;">
+            <script>
+              for (let i = 0; i < numCarousel; i++)
+                document.write(
+                  '<div class="carousel-item ' +
+                    (i == 0 ? "active" : "") +
+                    '">\
+								<img class="w-30" src="public/img/img' +
+                    (i + 1) +
+                    '.jpg" alt="Slide' +
+                    (i + 1) +
+                    '">\
+							</div>'
+                );
+            </script>
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-slide="prev"
+            ><span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span> </a
+          ><a
+            class="carousel-control-next"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-slide="next"
+            ><span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span></a
+          >
+        </div>
+      </section> -->
+      <div class="footer">
+        <div class="second">
+          <div class="fixed-content"><h1>Contact Me</h1></div>
+        </div>
+        <div class="fixed-content">
+          <div class="icon-row blue">
+            <a href="mailto:rajesh.gupta@dal.ca"
+              ><i class="fa fa-envelope"></i
+            ></a>
+            <a href="https://github.com/rajesh-gupta-14" id="github"
+              ><i class="fa fa-github"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/rajeshgupta14/" id="linkedin"
+              ><i class="fa fa-linkedin"></i
+            ></a>
+          </div>
+          <p></p>
+          <i
+            class="fa fa-chevron-up black"
+            style="color: #000;"
+            onclick="window.scroll({  top: 0,  left: 0,  behavior: 'smooth'});"
+          ></i>
+        </div>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <script
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"
+      ></script>
+      <script src="public/js/jquery.easing.1.3.js"></script>
+      <script src="public/js/jquery.waypoints.min.js"></script>
+      <script src="public/js/jquery.flexslider-min.js"></script>
+      <script src="public/js/owl.carousel.min.js"></script>
+      <script src="public/js/jquery.countTo.js"></script>
+      <script src="public/js/services.js"></script>
+      <script src="public/js/bundle.js"></script>
+      <script src="public/js/modernizr-2.6.2.min.js"></script>
+      <script src="public/js/script.js"></script>
+      <script src="public/bundle.js"></script>
+    </div>
+    <script src="public/bundle.js"></script>
+  </body>
+</html>
