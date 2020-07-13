@@ -56,7 +56,31 @@ i {
   cursor: pointer;
   will-change: transform;
 }
-
+.timespan{
+  float:right
+}
+.bullet{
+  font-size:12px;
+  vertical-align: text-top;
+}
+.skillList {
+  font-size: 20px;
+}
+/* .skills {
+  max-height: 200px;
+} */
+.card-title {
+  font-size: 16px;
+}
+.card-text {
+  font-size: 13px;
+}
+.time {
+  float: right;
+}
+.footer {
+  padding-top: 2em;
+}
 .card-body {
   padding-top: 3.5rem;
 }
@@ -69,6 +93,9 @@ i {
   left: 50%;
   margin-left: -40px;
 }
+.projName {
+  font-size: 1.2em;
+}
 .card-deck {
   padding-top: 3.5rem;
 }
@@ -78,6 +105,12 @@ i {
 } */
 .card:hover {
   -webkit-transform: scale(1.2);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1.1);
+}
+.sectionHead:hover {
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   -o-transform: scale(1);
@@ -97,20 +130,13 @@ i {
   border-radius: 4px;
   cursor: pointer;
   font-size: 44px;
-  margin: 0px 20px;
-  padding: 20px 30px;
+  margin: 0px 10px;
+  padding: 15px 20px;
   transition: all 400ms ease-in-out;
 }
 .icon-row i:hover {
   background: #fff;
   color: #ca5549;
-}
-
-.sectionHead {
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-  transform: scale(1.1);
 }
 .second {
   background: #eee;
